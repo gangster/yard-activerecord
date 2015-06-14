@@ -39,7 +39,6 @@ Gem::Specification.new do |s|
     "lib/yard-activerecord/fields/field_handler.rb",
     "lib/yard-activerecord/scopes/scope_handler.rb",
     "lib/yard-activerecord/validations/validates_handler.rb",
-    "lib/yard-activerecord/version.rb",
     "templates/default/tags/html/validations.erb",
     "templates/default/tags/setup.rb",
     "templates/default/tags/text/validations.erb",
@@ -77,4 +76,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simplecov>, [">= 0"])
   end
 end
-

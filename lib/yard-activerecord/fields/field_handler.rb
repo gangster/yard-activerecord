@@ -9,11 +9,14 @@ module YARD::Handlers::Ruby::ActiveRecord::Fields
     handles method_call(:timestamp)
     handles method_call(:datetime)
     handles method_call(:date)
+    handles method_call(:json)
+    handles method_call(:hstore)
+    handles method_call(:array)
+    handles method_call(:binary)
 
     def process
       return unless statement.namespace.jump(:ident).source == 't'
       method_name = call_params.first
-
       return if method_name['_id'] # Skip all id fields, associations will handle that
 
       ensure_loaded! P(globals.klass)
